@@ -79,8 +79,6 @@ final class FFW_SLIDER {
     if ( ! defined( 'FFW_SLIDER_PLUGIN_FILE' ) )
       define( 'FFW_SLIDER_PLUGIN_FILE', __FILE__ );
 
-    if ( ! defined( 'FFW_SLIDER_DEBUG' ) )
-      define ( 'FFW_SLIDER_DEBUG', true );
   }
 
 
@@ -112,6 +110,8 @@ final class FFW_SLIDER {
 
     }
 
+    require_once FFW_SLIDER_PLUGIN_DIR . '/includes/install.php';
+
 
   }
 
@@ -125,7 +125,7 @@ endif; // End if class_exists check
  * Use this function like you would a global variable, except without needing
  * to declare the global.
  *
- * Example: <?php $sqcash = FFW_SLIDER(); ?>
+ * Example: <?php $ffw_slider = FFW_SLIDER(); ?>
  *
  * @since 1.0
  * @return object The one true FFW_SLIDER Instance
@@ -140,16 +140,5 @@ function FFW_SLIDER() {
  * Run the FFW_SLIDER() function, which runs the instance of the FFW_SLIDER class.
  */
 FFW_SLIDER();
-
-
-
-/**
- * Debugging
- * @since 1.0
- */
-if ( FFW_SLIDER_DEBUG ) {
-  ini_set('display_errors','On');
-  error_reporting(E_ALL);
-}
 
 

@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function ffw_slider_add_menu_page() {
     global $ffw_slider_settings_page;
 
-    $ffw_slider_settings_page = add_submenu_page( 'edit.php?post_type=ffw_slider', __( 'Settings', 'ffw_slider' ), __( 'Settings', 'ffw_slider'), 'edit_pages', 'slider-settings', 'ffw_slider_settings_page' );
+    $ffw_slider_settings_page = add_submenu_page( 'edit.php?post_type=slides', __( 'Settings', 'ffw_slider' ), __( 'Settings', 'ffw_slider'), 'edit_pages', 'slider-settings', 'ffw_slider_settings_page' );
     
 }
 add_action( 'admin_menu', 'ffw_slider_add_menu_page', 11 );
